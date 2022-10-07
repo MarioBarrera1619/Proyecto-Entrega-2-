@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css2?family=Dongle:wght@300&family=Oooh+Baby&family=Poppins:wght@600&family=Roboto:wght@100&family=Sedgwick+Ave&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background-color: aqua;
+    text-align: center;
+    font-family: 'Poppins',sans-serif;
+    font-weight: bolder;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header{
+    font-size: large;
+    display: grid;
+    justify-content: center
+}
+
+
+.logo{
+    margin-left: 0px;
+    margin-top: 0px;
+    
+}
+
+h1{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: xx-large;
+    text-align: center;
+    padding: 50px;
+}
+
+section{
+    background-color: darkgoldenrod;
+    font-size: xx-large;
+    font-style: italic;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 0px;
+    padding: 20px;
+    align-content: center;
+    line-height: 40px;
+    letter-spacing: 4px;
+}
+
+p{
+    font-size: xx-large;
+    font-style: italic;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 0px;
+    padding: 20px;
+    align-content: center;
+    line-height: 40px;
+    letter-spacing: 4px;
+}
+
+nav ul{
+    list-style-type: none;
+    text-align: center;
+    background-color: royalblue;
+    flex-wrap: wrap;
+    
+}
+
+li{
+    display: inline-flex;
+    font-style: normal;
+    text-decoration: none;
+    padding: 5px;
+    align-content: center;
+
+}
+
+nav a{
+    text-decoration: none;
+    color: black;
+    padding: 10px;
+    width: 150px;
+}
+
+footer{
+    padding: 0px;
+    background-color: skyblue;
+    margin-bottom: 0px;
+    text-align: center;
+    color: antiquewhite;
+    margin: 0px;
+
+}
+
+
+/* Defino areas de grillas */
+
+header{
+    grid-area: header;
+}
+
+.navbar{
+    grid-area: navbar;
+}
+
+main{
+    grid-area: main;
+}
+
+.contenido{
+    grid-area: contenido;
+}
+
+footer{
+    grid-area: footer;
+}
+/* ordeno grillas */
+
+.envoltura{
+    background-color: #452994;
+    margin-bottom: 1.5em;
+    display: grid;
+    gap:20px;
+    grid-template-areas: 
+    "header"
+    "navbar" 
+    "main"
+    "contenido"
+    "main-footer";
+}
+.navbar{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    gap:15px;
+    justify-items:center;
+}
+
+
+.contenido{
+    background-color: goldenrod;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    gap:15px;
+    justify-items:center;
+}
+
+img{
+    width: 300px;
+    height: 250px;
+    border: 8px solid #3a3548;
+    margin-top: 15px;
+}
+
+@media (min-width:500px){
+    .envoltura{
+        margin: 0;
+        grid-template-areas: 
+        "header header"
+        "nav nav"
+        "footer footer";
+    }
+    nav ul{
+        font-display: flex;
+        justify-content: space-between;
+    }
+    nav ul, .ad, article, aside{
+        border: 3px solid goldenrod;
+    }
+
+    img{
+        width: 350px;
+        height: 300px;
+    }
+
+    footer{
+        margin-top: 0
+    };
+}
